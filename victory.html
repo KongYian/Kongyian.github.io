@@ -1,0 +1,52 @@
+
+<body ng-app="myApp" ng-controller="gameCtrl">
+<section class="content" style="margin-bottom: 10px">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4>HtTeam:{{ hteam }},Total victory:{{ count }}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 10px">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>venue</th>
+                                <th>ateam</th>
+                                <th>hgoals</th>
+                                <th>agoals</th>
+                                <th>hscore</th>
+                                <th>ascore</th>
+                                <th>winner</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="x in games">
+                                <td>{{ x.id }}</td>
+                                <td>{{ x.venue }}</td>
+                                <td>{{ x.ateam }}</td>
+                                <td>{{ x.hgoals }}</td>
+                                <td>{{ x.agoals }}</td>
+                                <td>{{ x.hscore }}</td>
+                                <td>{{ x.ascore }}</td>
+                                <td>{{ x.winner }}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
+<script src="core.js"></script>

@@ -1,0 +1,35 @@
+
+<body ng-app="myApp" ng-controller="rateCtrl">
+<section class="content" style="margin-bottom: 10px">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <button class="btn btn-primary" ng-click="caculateRate()">caculate rate</button>
+                        <hr>
+                        <div style="margin-top: 10px">
+                            <h4>Total:{{ total }}</h4>
+                            <h4>Win rate:{{ rate }}</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label>Home Team</label>
+                                <select class="form-control" id="t1">
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label>Attack Team</label>
+                                <select class="form-control" id="t2">
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
+<script src="core.js"></script>

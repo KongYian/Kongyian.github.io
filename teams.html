@@ -1,0 +1,46 @@
+
+<body ng-app="myApp" ng-controller="teamCtrl">
+<div class="wrapper">
+    <section class="content" style="margin-bottom: 10px">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Selected Team:{{ hteam }}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 10px">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Abbrev</th>
+                                    <th>Option</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="x in names">
+                                        <td>{{ x.id }}</td>
+                                        <td>{{ x.name }}</td>
+                                        <td>{{ x.abbrev }}</td>
+                                        <td><button class="btn btn-primary" ng-click="selectTeam($event)" id="{{ x.id }}" name="{{ x.name }}">select</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>
+<script src="core.js"></script>
